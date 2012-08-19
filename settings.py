@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'pitter.registration',
     'pitter.pitapp',
+    'pitter.widget_tweaks',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
