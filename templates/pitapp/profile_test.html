@@ -1,8 +1,19 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 {% block content %}
     <ul>
         <li>Username: {{ profile.user.username }}</li>
         <li>Topic: {{ profile.topic }}</li>
         <li>Location: {{ profile.location }}</li>
+        <ul>
+            {% for pit in profile.user.pits.all %}
+            <li>{{ pit.content }}</li>
+            {% endfor %}
+        </ul>
     </ul>
+    <a class="button" href="/pitter/new/">Nuevo Pit</a>
+    <script>
+        $(function () {
+            $(".button").button();
+        });
+    </script>
 {% endblock %}
